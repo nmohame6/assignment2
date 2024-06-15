@@ -4,8 +4,10 @@ class SandwichMaker:
         self.machine_resources = resources
 
     def check_resources(self, ingredients):
-        if self.machine_resources["bread"] >= ingredients["bread"] and self.machine_resources["ham"] >= ingredients["ham"] and self.machine_resources["cheese"] >= ingredients["cheese"]:
-            return True
+        if self.machine_resources["bread"] >= ingredients["bread"]:
+            if self.machine_resources["ham"] >= ingredients["ham"]:
+                if self.machine_resources["cheese"] >= ingredients["cheese"]:
+                    return True
         else:
             if self.machine_resources["bread"] < ingredients["bread"]:
                 print("Sorry, we don't have enough bread")

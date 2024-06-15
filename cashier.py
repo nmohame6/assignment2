@@ -2,7 +2,8 @@ class Cashier:
     def __init__(self):
         pass
 
-    def process_coins(self):
+
+    def process_coins(coins):
         """Returns the total calculated from coins inserted."""
         dollars = input("How many dollars?: ")
         half_dollars = input("How many half dollars?: ")
@@ -15,7 +16,7 @@ class Cashier:
     def transaction_result(self, coins, cost):
         if coins >= cost:
             change = float(coins - cost)
-            print("We're preparing your sandwich! Your change is: $" , change)
+            print("We're preparing your sandwich! Your change is: $", change)
             return True
         else:
             print("Sorry, that's not enough money, come back and try your order With more money or a smaller sandwich")
